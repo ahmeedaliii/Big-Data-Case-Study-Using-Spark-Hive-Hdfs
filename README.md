@@ -1,4 +1,4 @@
-# Big-Data-Case-Study-Using-Spark
+# Big-Data-Case-Study-Using-Spark-Hive-Hdfs
  
 ## Overview
 Q Company, specializing in retail, operates branches across various regions and utilizes an e-commerce platform. The company deals with a dynamic dataset including new products, customers, branches, and salespeople on a daily basis. The company also offers multiple customer discounts with specific redemption rules.
