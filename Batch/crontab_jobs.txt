@@ -1,0 +1,8 @@
+# Runs every hour, sets the PATH, and executes the Python script extract.py.
+0 * * * * PATH=/usr/bin:/bin:/opt/hadoop/bin python /data/project/scripts/extract.py >> /data/project/scripts/extract.log 2>&1
+
+# Runs every hour at the 20th minute, sets the PATH, and executes the Spark job processing.py using spark-submit.
+20 * * * * PATH=/usr/bin:/bin:/opt/spark2/bin:/opt/hadoop/bin spark-submit /data/project/scripts/processing.py >> /data/project/scripts/processing.log 2>&1
+
+# Runs daily at 1:00 AM, sets the PATH, and executes the Spark job daily_processing.py using spark-submit.
+0 1 * * * PATH=/usr/bin:/bin:/opt/spark2/bin:/opt/hadoop/bin spark-submit /data/project/scripts/daily_processing.py >> /data/project/scripts/daily_processing.log 2>&1
